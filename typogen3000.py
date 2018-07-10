@@ -1,32 +1,14 @@
 import random
 
-typos = {'a': "qwsz",
-         'b': "vghn",
-         'c': "xdfv",
-         'd': "serfcx",
-         'e': "wsdfr",
-         'f': "dcvgtr",
-         'g': "fvbhyt",
-         'h': "gbnjuy",
-         'i': "ujko",
-         'j': "hnmkıu",
-         'k': "jmloi",
-         'l': "mkop",
-         'm': "njkl",
-         'n': "bhjm",
-         'o': "iklp",
-         'p': "ol",
-         'q': "wa",
-         'r': "edft",
-         's': "wazxde",
-         't': "rfgy",
-         'u': "yhji",
-         'v': "cfgb",
-         'w': "qase",
-         'x': "zsdc",
-         'y': "tghu",
-         'z': "asx",
-         ' ': " "}
+typos = {'a': "qwsz",   'b': "vghn",   'c': "xdfv",
+         'd': "serfcx", 'e': "wsdfr",  'f': "dcvgtr",
+         'g': "fvbhyt", 'h': "gbnjuy", 'i': "ujko",
+         'j': "hnmkıu", 'k': "jmloi",  'l': "mkop",
+         'm': "njkl",   'n': "bhjm",   'o': "iklp",
+         'p': "ol",     'q': "wa",     'r': "edft",
+         's': "wazxde", 't': "rfgy",   'u': "yhji",
+         'v': "cfgb",   'w': "qase",   'x': "zsdc",
+         'y': "tghu",   'z': "asx",    ' ': " "}
 
 FAILRATE = 0.175
 
@@ -35,9 +17,9 @@ while(True):
     msg = msg.lower() #convert msg to lowercase
 
     res = "" #result string
-    
-    for c in msg:
 
+    # iterate over all characters and change them randomly
+    for c in msg:
         if(c in typos):
             deter = random.uniform(0, 1)
                 
@@ -49,4 +31,5 @@ while(True):
         else:
             res = res + c
 
+    #report typo string
     print ("Typod: " + res + "\n\n")    
