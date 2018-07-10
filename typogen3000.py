@@ -30,11 +30,11 @@ typos = {'a': "qwsz",
 
 FAILRATE = 0.175
 
-
 while(True):
     msg = input("\nMsg : ")
+    msg = msg.lower() #convert msg to lowercase
 
-    res = ""
+    res = "" #result string
     
     for c in msg:
 
@@ -42,16 +42,11 @@ while(True):
             deter = random.uniform(0, 1)
                 
             if (deter <= FAILRATE): #there is a typo now
-                typo_set = typos[c]
-                typo_set_len = len(typo_set)
-                random_typo_choice = random.choice(range(0, typo_set_len))
-                random_typo_char = typo_set[random_typo_choice]
-                res = res + random_typo_char
+                res += typos[c][random.choice(range(0, len(typos[c])))]
                     
             else:
                 res = res + c
         else:
             res = res + c
 
-    print ("Typod: " + res + "\n\n") 
-        
+    print ("Typod: " + res + "\n\n")    
