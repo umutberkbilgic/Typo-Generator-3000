@@ -28,33 +28,30 @@ typos = {'a': "qwsz",
          'z': "asx",
          ' ': " "}
 
-FAILRATE = 0.2
+FAILRATE = 0.175
 
 
 while(True):
     msg = input("\nMsg : ")
-    if(all(char in typos for char in msg) is False):
-        print("Please enter a valid message.")
-    else:
-        res = ""
-        for c in msg:
+
+    res = ""
+    
+    for c in msg:
+
+        if(c in typos):
             deter = random.uniform(0, 1)
-            
+                
             if (deter <= FAILRATE): #there is a typo now
                 typo_set = typos[c]
                 typo_set_len = len(typo_set)
                 random_typo_choice = random.choice(range(0, typo_set_len))
                 random_typo_char = typo_set[random_typo_choice]
-
                 res = res + random_typo_char
-                
+                    
             else:
                 res = res + c
-                
+        else:
+            res = res + c
 
-        print ("Bahadir would say: " + res + "\n\n") 
+    print ("Typod: " + res + "\n\n") 
         
-        
-        
-
-    
