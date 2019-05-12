@@ -26,7 +26,7 @@ typos = {'a': "qwsz",   'b': "vghn",   'c': "xdfv",
          'p': "ol",     'q': "wa",     'r': "edft",
          's': "wazxde", 't': "rfgy",   'u': "yhji",
          'v': "cfgb",   'w': "qase",   'x': "zsdc",
-         'y': "tghu",   'z': "asx",    ' ': " "}
+         'y': "tghu",   'z': "asx"}
 
 randoms = ["ay", "of", "yha", "ya", "lan" , "wtf", "aq"]
 
