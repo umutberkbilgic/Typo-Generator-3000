@@ -2,13 +2,13 @@ import random
 import argparse
 
 DEFAULT_LOOPY_BOI = 2
-DEFAULT_FAIL_RATE = 0.3
-DEFAULT_RANDOM_WORDS = 0.05
+DEFAULT_FAIL_RATE = 0.1
+DEFAULT_RANDOM_WORDS = 0.5
 
 parser = argparse.ArgumentParser(description="feelin' a bit baho today?")
 parser.add_argument('-l', '--loopy',  type=int, default=DEFAULT_LOOPY_BOI, help=f'set # of froot loops, default is {DEFAULT_LOOPY_BOI}')
-parser.add_argument('-f', '--fail',  type=float, default=0.1, help=f'set drunkenness in range 0.0 to 1.0, default is {DEFAULT_FAIL_RATE}')
-parser.add_argument('-r', '--random',  type=float, default=0.5, help=f'set grr factor in range 0.0 to 1.0, default is {DEFAULT_RANDOM_WORDS}')
+parser.add_argument('-f', '--fail',  type=float, default=DEFAULT_FAIL_RATE, help=f'set drunkenness in range 0.0 to 1.0, default is {DEFAULT_FAIL_RATE}')
+parser.add_argument('-r', '--random',  type=float, default=DEFAULT_RANDOM_WORDS, help=f'set grr factor in range 0.0 to 1.0, default is {DEFAULT_RANDOM_WORDS}')
 parser.add_argument('-m', '--msg',  type=str, required=True, help=f'a string that makes too much sense as it is')
 args = parser.parse_args()
 
@@ -26,9 +26,11 @@ typos = {'a': "qwsz",   'b': "vghn",   'c': "xdfv",
          'p': "ol",     'q': "wa",     'r': "edft",
          's': "wazxde", 't': "rfgy",   'u': "yhji",
          'v': "cfgb",   'w': "qase",   'x': "zsdc",
-         'y': "tghu",   'z': "asx"}
+         'y': "tghu",   'z': "asx", 'ı': "ujklo" , 
+         'ğ':"pşiü", 'ü': "ğiş", 'ö': "mklç",
+         'ç':"ölşi", 'ş':"çlp"}
 
-randoms = ["ay", "of", "yha", "ya", "lan" , "wtf", "aq"]
+randoms = ["ay", "of", "yha", "ya", "lan" , "wtf", "aq", "abi"]
 
 
 msg = msg.lower() #convert msg to lowercase
