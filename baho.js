@@ -1,4 +1,4 @@
-baho = () => {
+baho = (customString) => {
   
   getLastMsg = () => {
     doc = document.getElementsByClassName("vW7d1");
@@ -38,10 +38,10 @@ baho = () => {
   
   const randoms = ["ay", "of", "yha", "ya", "lan" , "wtf", "aq", "abi"];
 
-  var lastMsg = getLastMsg().toLowerCase();
+  var lastMsg = customString ? customString : getLastMsg();
 
   for (var i = 0; i < lastMsg.length; i++) {
-    var current = lastMsg.charAt(i);
+    var current = lastMsg.charAt(i).toLowerCase();
     var decider = Math.random();
     var randomize = Math.random();
   
