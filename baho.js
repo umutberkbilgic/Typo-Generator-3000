@@ -1,4 +1,4 @@
-baho = (customString) => {
+baho = (customString, customFailRate, customRandomRate) => {
   
   // retrieves last message in the current whatsapp web chat window
   getLastMsg = () => {
@@ -18,7 +18,7 @@ baho = (customString) => {
   }
 
   // provide replace function for strings
-  String.prototype.replaceAt = (index, replacement) => {
+  String.prototype.replaceAt = function(index, replacement){
     return this.substr(0, index) + replacement + this.substr(index + replacement.length);
   }  
 
@@ -27,8 +27,8 @@ baho = (customString) => {
   const textFieldParentClassName = "_39LWd";
   const sendButtonClassName = "_35EW6"; 
 
-  const failRate = 0.07;
-  const randomRate = 0.15;
+  const failRate = customFailRate ? customFailRate : 0.07;
+  const randomRate = customRandomRate ? customRandomRate : 0.15;
 
   const typos = {
     'a': "qwsz",    'b': "vghn",   'c': "xdfv",
