@@ -1,0 +1,14 @@
+{
+  "name": "Bahadirize",
+  "description": "Let Jesus take the wheel",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Divine intervention",
+      "default_icon": "icon_128.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
