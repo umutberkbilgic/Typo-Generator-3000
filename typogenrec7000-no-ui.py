@@ -33,7 +33,7 @@ typos = {'a': "sqz,wxe",   'b': "vghn,fj", 'c': "xdfv,sg",
          'ğ':"piü,ş",      'ü': "ği,ş",    'ö': "mklç,şj",
          'ç':"ölş,ki",     'ş':"çlpi,ğoöü"}
 
-randoms = ["ay", "of", "yha", "ya", "lan" , "wtf", "aq", "abi"]
+randoms = ["ay", "of", "yha", "ya", "lan" , "wtf", "aq", "abi", "8"]
 
 
 msg = msg.lower() #convert msg to lowercase
